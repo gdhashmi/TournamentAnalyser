@@ -1,5 +1,7 @@
 const fetchOptions = { 
-    mode: 'no-cors'
+    headers: {
+        'Access-Control-Allow-Origin' : 'https://gdhashmi.github.io/'
+    }
 }
 async function fetchData() {
     const response = await fetch('https://api.cuescore.com/tournament/?id=6647635', fetchOptions);
