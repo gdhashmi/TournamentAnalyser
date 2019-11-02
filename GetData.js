@@ -1,3 +1,6 @@
+
+const app = document.getElementById('root')
+app.textContent = 'Fetching Data..';
 const fetchOptions = { 
     headers: {
         'Access-Control-Allow-Origin': '*'
@@ -11,5 +14,4 @@ async function fetchData() {
 }
 fetchData();
 
-const app = document.getElementById('root')
 app.textContent = JSON.stringify(myJson);
