@@ -1,6 +1,6 @@
 const fetchOptions = { 
     headers: {
-        'Access-Control-Allow-Origin' : 'https://gdhashmi.github.io/'
+        'Origin' : 'https://gdhashmi.github.io/'
     }
 }
 async function fetchData() {
