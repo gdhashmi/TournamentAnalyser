@@ -1,4 +1,4 @@
-import {getTournamentDetails } from 'analyzeData.js';
+import {getTournamentDetails } from './analyzeData.js';
 const app = document.getElementById('root')
 app.textContent = 'Fetching Data..';
 const fetchOptions = { 
