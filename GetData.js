@@ -9,7 +9,6 @@ async function fetchData(Data) {
     Data = await response.json();
     console.log('Received response..');
     console.log(JSON.stringify(Data));
-    return myJson;
 }
 var lData;
 fetchData(lData).then 
