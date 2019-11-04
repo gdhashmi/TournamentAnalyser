@@ -9,7 +9,8 @@ async function fetchData(Data) {
     Data = await response.json();
     console.log('Received response..');
     console.log(JSON.stringify(Data));
+    return 1;
 }
-var lData;
-fetchData(lData).then 
-getTournamentDetails(lData);
+var Data;
+fetchData(Data).then 
+    (getTournamentDetails(Data));
