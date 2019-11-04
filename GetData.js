@@ -18,7 +18,7 @@ const fetchOptions = {
     //}
 }
 async function fetchData() {
-    const response = await fetch('https://api.cuescore.com/tournament/?id=6647635', fetchOptions);
+    const response = await fetch('https://crossorigin.me/https://api.cuescore.com/tournament/?id=6647635', fetchOptions);
     console.log(response)
     const myJson = await response.json()
     console.log(JSON.stringify(myJson));
