@@ -20,5 +20,5 @@ const fetchOptions = {
 console.log('Getting Keys');
 //console.log(Object.keys(lData));
 //fetch('https://cors-anywhere.herokuapp.com/https://api.cuescore.com/tournament/?id=6647635', fetchOptions).then((res) => {console.log('Waiting for response'); res.json()}).then((data) => {console.log('Processing response' + JSON.stringify(data)); getTournamentDetails(data)});
-fetchData().then( () => {await sleep(5000);
-    getTournamentDetails(lData)});
+fetchData().then(sleep(5000).then(
+    getTournamentDetails(lData)));
