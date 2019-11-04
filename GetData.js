@@ -13,5 +13,5 @@ async function fetchData() {
     app.textContent = JSON.stringify(myJson);
     return myJson;
 }
-var lData = fetchData();
+var lData = await fetchData();
 getTournamentDetails(lData);
