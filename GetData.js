@@ -21,7 +21,6 @@ async function fetchData() {
     console.log(response)
     const myJson = await response.json()
     console.log(JSON.stringify(myJson));
-    const app = document.getElementById('root')
     app.textContent = JSON.stringify(myJson);
 }
 fetchData();
