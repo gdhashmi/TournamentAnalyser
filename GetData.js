@@ -7,7 +7,7 @@ const fetchOptions = {
 
 var lData =  async () => {
     const response = await fetch('https://cors-anywhere.herokuapp.com/https://api.cuescore.com/tournament/?id=6647635', fetchOptions);
-    lData = await response.json();
+    await response.json();
     console.log('Received response..');
     console.log(JSON.stringify(lData));
 //    return 1;
