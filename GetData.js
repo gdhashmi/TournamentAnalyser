@@ -13,7 +13,9 @@ const fetchOptions = {
 //}
 console.log('Getting Keys');
 //console.log(Object.keys(lData));
-fetch('https://cors-anywhere.herokuapp.com/https://api.cuescore.com/tournament/?id=6647635', fetchOptions).then((res) => {console.log('Waiting for response'); await res.json()}).then((data) => {console.log('Processing response' + JSON.stringify(data)); getTournamentDetails(data)});
+fetch('https://cors-anywhere.herokuapp.com/https://api.cuescore.com/tournament/?id=6647635', fetchOptions).then((res) => { console.log('Waiting for response'); return res.json() }).then((data) => { console.log('Processing response' + JSON.stringify(data)); return getTournamentDetails(data) }).catch((err) => {
+    console.log(err);
+});
 //fetchData().then(sleep(5000).then(
 // getTournamentDetails(lData);
 //));
