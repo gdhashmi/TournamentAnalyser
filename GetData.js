@@ -5,17 +5,9 @@ const fetchOptions = {
     origin:'https://gdhashmi.github.io/', 
  }
 
-//var lData =  async () => {
-//    const response = await fetch('https://cors-anywhere.herokuapp.com/https://api.cuescore.com/tournament/?id=6647635', fetchOptions);
-//   await response.json();
-//   console.log('Received response..');
-//    return 1;
-//}
-console.log('Getting Keys');
-//console.log(Object.keys(lData));
-fetch('https://cors-anywhere.herokuapp.com/https://api.cuescore.com/tournament/?id=6647635', fetchOptions).then((res) => { console.log('Waiting for response'); return res.json() }).then((data) => { console.log('Processing response' + JSON.stringify(data)); return getTournamentDetails(data) }).catch((err) => {
-    console.log(err);
-});
-//fetchData().then(sleep(5000).then(
-// getTournamentDetails(lData);
-//));
+const URL = 'https://cors-anywhere.herokuapp.com/https://api.cuescore.com/tournament/?id=6647635';
+//Get the data and display.
+fetch(URL, fetchOptions)
+.then((res) => { return res.json() })
+    .then((data) => { return getTournamentDetails(data) })
+.catch((err) => { console.log(err);});
